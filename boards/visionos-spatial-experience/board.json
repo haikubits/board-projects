@@ -98,15 +98,6 @@
           "checklist": []
         },
         {
-          "id": "card-mu9iljtuarnf",
-          "title": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium",
-          "desc": "",
-          "priority": "none",
-          "dueDate": "",
-          "tags": [],
-          "checklist": []
-        },
-        {
           "id": "card-mu9ig7owhkyq",
           "title": "https://leetcode.com/problems/merge-two-sorted-lists/description/",
           "desc": "",
@@ -132,13 +123,34 @@
           "dueDate": "",
           "tags": [],
           "checklist": []
+        },
+        {
+          "id": "card-muuesojv866k",
+          "title": "https://leetcode.com/problems/merge-intervals/description/",
+          "desc": "Sort, the keep appending. Remember to max the end of the two intervals while merging.",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "3:31"
+          ],
+          "checklist": []
         }
       ]
     },
     {
       "id": "col-mu9ibomd",
       "title": "Second Pass (2 Days Later)",
-      "cards": []
+      "cards": [
+        {
+          "id": "card-mu9iljtuarnf",
+          "title": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium",
+          "desc": "Made some mistakes in second attempt.\nleft, right, char_map\n\n- if not repeating, add to charmap\n- if repeating, first update longest_length, save the new_left index as previous position of char + 1.\nDelete charmap entries between left and new_left.\nset new_left and set right in charmap\n\nin the end longest_length is the max of longest_length and current value of (right-left)",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [],
+          "checklist": []
+        }
+      ]
     },
     {
       "id": "col-mu9icm33",
@@ -147,6 +159,36 @@
     }
   ],
   "history": [
+    {
+      "id": "hist-muufa2ex9dul",
+      "action": "Moved Task",
+      "details": "Moved task \"https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium\" from [First Pass] to [Second Pass (2 Days Later)]",
+      "timestamp": 1791154729401
+    },
+    {
+      "id": "hist-muuf9zvm2614",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium\"",
+      "timestamp": 1791154726114
+    },
+    {
+      "id": "hist-muueujfgl6x9",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/merge-intervals/description/\"",
+      "timestamp": 1791154004956
+    },
+    {
+      "id": "hist-muuetfr9d2qf",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/merge-intervals/description/\"",
+      "timestamp": 1791153953541
+    },
+    {
+      "id": "hist-muuesojv1i17",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/merge-intervals/description/\" to column [First Pass]",
+      "timestamp": 1791153918283
+    },
     {
       "id": "hist-mun2ab7zjia8",
       "action": "Edited Task",
@@ -238,5 +280,5 @@
       "timestamp": 1789910264342
     }
   ],
-  "updatedAt": "2026-09-30T21:48:53.925Z"
+  "updatedAt": "2026-10-04T22:59:06.415Z"
 }

@@ -131,7 +131,29 @@
           "priority": "none",
           "dueDate": "",
           "tags": [
-            "3:31"
+            "1stAttempt-3:31"
+          ],
+          "checklist": []
+        },
+        {
+          "id": "card-muuft7p6pwhr",
+          "title": "https://leetcode.com/problems/group-anagrams/",
+          "desc": "from collections import defaultdict\n\nclass Solution:\n    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:\n        groups = defaultdict(list)\n        for s in strs:\n            groups[\"\".join(sorted(s))].append(s)\n        return list(groups.values())",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:15:00"
+          ],
+          "checklist": []
+        },
+        {
+          "id": "card-muvtapnxa440",
+          "title": "https://leetcode.com/problems/trapping-rain-water",
+          "desc": "Calculate water stored in the column at each index, then sum up. At each index, max water stored is the min of the height of the highest walls on each side (minus the base i.e. height of the wall at index i).\n\n\n\nFEEDBACK:\n\nAreas for Improvement\n\nReinventing Built-in Functions (max):\n- The helper absolutePositive(x) is simply max(0, x). In Python, defining a custom function for this adds overhead and visual clutter.\n\nUnnecessary Array Allocations ($O(N)$ Space Overhead):\n\n- You create three separate lists of size $N$: max_left, max_right, and individual_areas.\n\n- [0 for i in range(n)] is more idiomatically written as [0] * n.\n\n- Storing individual_areas as a full list before calling sum() consumes extra memory; calculating a running sum on the fly avoids allocating that third list entirely.\n\nLoop Range Asymmetry & Edge Case Vulnerability:\n\n- range(n-2, 0, -1) stops at 1, leaving max_right[0] untouched. While index 0 never holds water anyway (since max_left[0] = 0), asymmetric bounds increase the risk of off-by-one bugs.\n\n- If height is empty (len(height) == 0), height[0] raises an IndexError. (LeetCode guarantees $N \\ge 1$, but production code should guard against $N < 3$).",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:20:00"
           ],
           "checklist": []
         }
@@ -147,7 +169,22 @@
           "desc": "Made some mistakes in second attempt.\nleft, right, char_map\n\n- if not repeating, add to charmap\n- if repeating, first update longest_length, save the new_left index as previous position of char + 1.\nDelete charmap entries between left and new_left.\nset new_left and set right in charmap\n\nin the end longest_length is the max of longest_length and current value of (right-left)",
           "priority": "none",
           "dueDate": "",
-          "tags": [],
+          "tags": [
+            "1stAttempt-20:00",
+            "2ndAttempt-8:25"
+          ],
+          "checklist": []
+        },
+        {
+          "id": "card-muufecv4t26w",
+          "title": "https://leetcode.com/problems/product-of-array-except-self/description/",
+          "desc": "an array of left_products (i = 1 to n-1)\nthen an array of right_products (j = n-2 to 0)\nmultiply both",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt-30:00",
+            "2ndAttempt-8:26"
+          ],
           "checklist": []
         }
       ]
@@ -159,6 +196,96 @@
     }
   ],
   "history": [
+    {
+      "id": "hist-muvtizdbfoi5",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/trapping-rain-water\"",
+      "timestamp": 1791239126159
+    },
+    {
+      "id": "hist-muvtcyoc0fv7",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/trapping-rain-water\"",
+      "timestamp": 1791238845324
+    },
+    {
+      "id": "hist-muvtapnxbwpe",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/trapping-rain-water\" to column [First Pass]",
+      "timestamp": 1791238740333
+    },
+    {
+      "id": "hist-muughgq535s3",
+      "action": "Moved Task",
+      "details": "Moved task \"https://leetcode.com/problems/product-of-array-except-self/description/\" from [First Pass] to [Second Pass (2 Days Later)]",
+      "timestamp": 1791156754157
+    },
+    {
+      "id": "hist-muughco09mv2",
+      "action": "Moved Task",
+      "details": "Moved task \"https://leetcode.com/problems/group-anagrams/\" from [Question List] to [First Pass]",
+      "timestamp": 1791156748896
+    },
+    {
+      "id": "hist-muugh9g6r2u3",
+      "action": "Moved Task",
+      "details": "Reordered task \"https://leetcode.com/problems/group-anagrams/\" in Question List",
+      "timestamp": 1791156744726
+    },
+    {
+      "id": "hist-muugh4nh4jkz",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/group-anagrams/\"",
+      "timestamp": 1791156738509
+    },
+    {
+      "id": "hist-muuft7p6li30",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/group-anagrams/\" to column [Question List]",
+      "timestamp": 1791155622714
+    },
+    {
+      "id": "hist-muufs49a8p42",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/product-of-array-except-self/description/\"",
+      "timestamp": 1791155571599
+    },
+    {
+      "id": "hist-muufeup79ly6",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/product-of-array-except-self/description/\"",
+      "timestamp": 1791154952683
+    },
+    {
+      "id": "hist-muufecv4jw6c",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/product-of-array-except-self/description/\" to column [First Pass]",
+      "timestamp": 1791154929568
+    },
+    {
+      "id": "hist-muufdb0grfw0",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium\"",
+      "timestamp": 1791154880512
+    },
+    {
+      "id": "hist-muufd5ptruru",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium\"",
+      "timestamp": 1791154873649
+    },
+    {
+      "id": "hist-muufbjyxqhn4",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?difficulty=Medium\"",
+      "timestamp": 1791154798809
+    },
+    {
+      "id": "hist-muufb6486g95",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/merge-intervals/description/\"",
+      "timestamp": 1791154780856
+    },
     {
       "id": "hist-muufa2ex9dul",
       "action": "Moved Task",
@@ -280,5 +407,5 @@
       "timestamp": 1789910264342
     }
   ],
-  "updatedAt": "2026-10-04T22:59:06.415Z"
+  "updatedAt": "2026-10-05T22:25:42.894Z"
 }

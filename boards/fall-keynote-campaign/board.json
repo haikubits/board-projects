@@ -1,0 +1,59 @@
+{
+  "format": "boardcraft-board",
+  "version": 1,
+  "id": "board-marketing",
+  "slug": "fall-keynote-campaign",
+  "title": "Fall Keynote Campaign",
+  "accentColor": "#AF52DE",
+  "columns": [
+    {
+      "id": "col-mkt-todo",
+      "title": "Briefs & Copy",
+      "cards": [
+        {
+          "id": "card-201",
+          "title": "Hero Webpage Interactive 3D Canvas",
+          "desc": "Interactive scroll-driven animation showing internal chip architecture.",
+          "priority": "high",
+          "dueDate": "2026-10-18",
+          "tags": [
+            "Web",
+            "Keynote"
+          ],
+          "checklist": []
+        }
+      ]
+    },
+    {
+      "id": "col-mkt-done",
+      "title": "Approved",
+      "cards": [
+        {
+          "id": "card-202",
+          "title": "Press Release Distribution List",
+          "desc": "Embargo guidelines finalized for Tier 1 tech publishers.",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "PR"
+          ],
+          "checklist": [
+            {
+              "text": "Sign NDA agreements",
+              "done": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "id": "h-seed-2",
+      "action": "Board Initialized",
+      "details": "Keynote launch timeline established",
+      "timestamp": 1791396057758
+    }
+  ],
+  "updatedAt": "2026-10-09T18:32:10.602Z"
+}

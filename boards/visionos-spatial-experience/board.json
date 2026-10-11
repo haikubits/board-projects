@@ -35,15 +35,6 @@
       "title": "First Pass",
       "cards": [
         {
-          "id": "card-mu9ibywumi2m",
-          "title": "https://leetcode.com/problems/valid-palindrome-ii/description/?difficulty=Medium",
-          "desc": "",
-          "priority": "none",
-          "dueDate": "",
-          "tags": [],
-          "checklist": []
-        },
-        {
           "id": "card-mu9ic7y16lyy",
           "title": "https://leetcode.com/problems/k-closest-points-to-origin/?difficulty=Medium",
           "desc": "",
@@ -176,6 +167,28 @@
             "1stAttempt:17:45"
           ],
           "checklist": []
+        },
+        {
+          "id": "card-mv4dperrbr8h",
+          "title": "https://leetcode.com/problems/coin-change/",
+          "desc": "Idiomatic pythonic solution:\n\nclass Solution:\n    def coinChange(self, coins: list[int], amount: int) -> int:\n        dp = [float(\"inf\")] * (amount + 1)\n        dp[0] = 0\n        for i in range(1, amount+1):\n            for coin in coins:\n                if coin <=i:\n                    dp[i] = min(dp[i], 1 + dp[i - coin])\n        return dp[amount] if dp[amount] != float(\"inf\") else -1",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:16:00"
+          ],
+          "checklist": []
+        },
+        {
+          "id": "card-mv4fbtfo8cp9",
+          "title": "https://leetcode.com/problems/longest-increasing-subsequence",
+          "desc": "I am mad",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:35:00"
+          ],
+          "checklist": []
         }
       ]
     },
@@ -206,6 +219,18 @@
             "2ndAttempt-8:26"
           ],
           "checklist": []
+        },
+        {
+          "id": "card-mu9ibywumi2m",
+          "title": "https://leetcode.com/problems/valid-palindrome-ii/description/?difficulty=Medium",
+          "desc": "Build a sub function to check isPalindrome between index i and j.\nDeclare two pointers and move them in on equal characters, on finding unequal characters, leverage that function to check if its palindrome by removing either of the two characters.\n\nclass Solution:\n    def validPalindrome(self, s: str) -> bool:\n        def isPalindrome(p: str, i: int, j: int) -> bool:\n            while i <= j:\n                if p[i] != p[j]:\n                    return False\n                i += 1\n                j -= 1\n            return True\n        \n        if not s:\n            return True\n        if len(s) == 1:\n            return True\n        n = len(s)\n        left, right = 0, n-1\n        while left <= right:\n            if s[left] == s[right]:\n                left += 1\n                right -= 1\n                continue\n            else:\n                return isPalindrome(s, left+1, right) or isPalindrome(s, left, right-1)\n        return True",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:25:00",
+            "2ndAttempt:12:00"
+          ],
+          "checklist": []
         }
       ]
     },
@@ -216,6 +241,42 @@
     }
   ],
   "history": [
+    {
+      "id": "hist-mv4fc6prw8tg",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/longest-increasing-subsequence\"",
+      "timestamp": 1791759490047
+    },
+    {
+      "id": "hist-mv4fbtfopt31",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/longest-increasing-subsequence\" to column [First Pass]",
+      "timestamp": 1791759472836
+    },
+    {
+      "id": "hist-mv4dytk2o7aa",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/coin-change/\"",
+      "timestamp": 1791757186850
+    },
+    {
+      "id": "hist-mv4dperrmvck",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/coin-change/\" to column [First Pass]",
+      "timestamp": 1791756747783
+    },
+    {
+      "id": "hist-mv4cdwfj4cl5",
+      "action": "Moved Task",
+      "details": "Moved task \"https://leetcode.com/problems/valid-palindrome-ii/description/?difficulty=Medium\" from [First Pass] to [Second Pass (2 Days Later)]",
+      "timestamp": 1791754531183
+    },
+    {
+      "id": "hist-mv4cdsmr8l2s",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/valid-palindrome-ii/description/?difficulty=Medium\"",
+      "timestamp": 1791754526259
+    },
     {
       "id": "hist-mv1aq4q9onsz",
       "action": "Edited Task",
@@ -457,5 +518,5 @@
       "timestamp": 1789910264342
     }
   ],
-  "updatedAt": "2026-10-09T18:32:10.601Z"
+  "updatedAt": "2026-10-11T22:58:15.070Z"
 }

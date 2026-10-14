@@ -189,6 +189,17 @@
             "1stAttempt:35:00"
           ],
           "checklist": []
+        },
+        {
+          "id": "card-mv89vjuft436",
+          "title": "https://leetcode.com/problems/target-sum/description/",
+          "desc": "1. Mathematical thinking to reduce the problem into a 0/1 Knapsack problem.\n2. Solve the knapsack problem smartly:\nProperly find s i.e. (target + total_sum)/2, check edge cases like 0 or odd.\ninitialize dp, dp[0][0] = 1 dp[0][j] for all j should be 0.\nfor num in nums:\n  for j in range(s, num - 1, -1):\n    ... simply update dp[j] by adding dp[j - num]\nreturn dp[s].",
+          "priority": "none",
+          "dueDate": "",
+          "tags": [
+            "1stAttempt:30:00"
+          ],
+          "checklist": []
         }
       ]
     },
@@ -241,6 +252,18 @@
     }
   ],
   "history": [
+    {
+      "id": "hist-mv89ys21dsin",
+      "action": "Edited Task",
+      "details": "Updated details for task \"https://leetcode.com/problems/target-sum/description/\"",
+      "timestamp": 1791992331145
+    },
+    {
+      "id": "hist-mv89vjufs3m2",
+      "action": "Created Task",
+      "details": "Added \"https://leetcode.com/problems/target-sum/description/\" to column [First Pass]",
+      "timestamp": 1791992180535
+    },
     {
       "id": "hist-mv4fc6prw8tg",
       "action": "Edited Task",
@@ -518,5 +541,5 @@
       "timestamp": 1789910264342
     }
   ],
-  "updatedAt": "2026-10-11T22:58:15.070Z"
+  "updatedAt": "2026-10-14T15:39:00.548Z"
 }
